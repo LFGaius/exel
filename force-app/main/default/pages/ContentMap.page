@@ -1,0 +1,21 @@
+<apex:page controller="ContentMapController" contentType="application/vnd.ms-excel#AllContacts.xls" cache="true">
+    <table >
+        <tr> 
+            <apex:repeat value="{!keys}" var="key1">
+                <th style="border:1px solid rgb(212,212,212);">{!key1}</th> 
+            </apex:repeat>  
+        </tr> 
+        
+       <apex:repeat value="{!datas}" var="line">
+           <tr>
+                <apex:repeat value="{!line}" var="val">
+                <td style="border:1px solid rgb(212,212,212);">{!val}</td> 
+           		 </apex:repeat>
+           </tr>
+         </apex:repeat>
+       
+       
+     
+    </table>
+    
+</apex:page>
